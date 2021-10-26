@@ -1,0 +1,24 @@
+---
+version: "3.8"
+
+services:
+  web:
+    depends_on:
+      - api
+    build: ./web
+    ports: 
+      - 3000:3000
+    volumes: 
+      - ./web:/app
+    
+  api:
+    depends_on:
+      - web
+    build: ./api
+    ports: 
+      - 8080:8080
+      volumes: 
+        - ./api:/app
+        
+volumes: 
+  Test-Project:

@@ -1,0 +1,21 @@
+version: "3.8"
+services: 
+  web: 
+    build: ./web
+    ports: 
+      - 3000:3000
+    volumes: 
+      - ./web:/app
+
+  api:
+    build: ./api
+    ports: 
+      - 8080:8080
+    volumes: 
+      - ./api:/app
+    
+volumes: 
+  Test-Project:
+
+
+

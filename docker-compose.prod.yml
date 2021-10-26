@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  web:
+    container_name: web
+    build:
+      context: ./web
+      dockerfile: Dockerfile.prod
+    ports:
+      - 80:80
+    restart: unless-stopped
+  api:
+    container_name: api
+    build: ./api
+    ports:
+      - 8080:8080
+    restart: unless-stopped
