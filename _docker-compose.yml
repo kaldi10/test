@@ -17,8 +17,8 @@ services:
     build: ./api
     ports: 
       - 8080:8080
-      volumes: 
-        - ./api:/app
+    volumes: 
+      - ./api:/app
         
 volumes: 
   Test-Project:
